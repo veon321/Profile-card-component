@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+  --blue-600: hsl(185, 75%, 39%);
+  --navy-950: hsl(229, 23%, 23%);
+  --gray-500: hsl(227, 10%, 46%);
+  --gray-100: hsl(225, 10%, 92%);
+  --font-main: 'Kumbh Sans', sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--blue-600);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-image: url('images/bg-pattern-top.svg'), url('images/bg-pattern-bottom.svg');
+  background-position: right 52vw bottom 35vh, left 48vw top 52vh;
+  background-repeat: no-repeat, no-repeat;
+}
+
+.container {
+  background-color: white;
+  width: clamp(280px, 90vw, 350px);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 50px 100px -20px rgba(8, 70, 94, 0.5);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header .bg-pattern {
+  width: 100%;
+  display: block;
+}
+
+.avatar-container {
+  position: relative;
+  height: 0;
+  text-align: center;
+}
+
+.avatar {
+  border: 5px solid white;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+}
+
+.content {
+  padding: clamp(20px, 6vw, 24px);
+  padding-top: clamp(60px, 15vw, 80px);
+  text-align: center;
+}
+
+.user-info {
+  margin-bottom: 8px;
+}
+
+.name {
+  color: var(--navy-950);
+  font-weight: 700;
+  font-size: clamp(16px, 4vw, 18px);
+  margin-right: 8px;
+}
+
+.age {
+  color: var(--gray-500);
+  font-size: clamp(16px, 4vw, 18px);
+}
+
+.from {
+  color: var(--gray-500);
+  font-size: clamp(13px, 3vw, 14px);
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  padding: clamp(20px, 6vw, 24px);
+  text-align: center;
+}
+
+.stat-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  color: var(--navy-950);
+  font-weight: 700;
+  font-size: clamp(16px, 4vw, 18px);
+}
+
+.stat-label {
+  color: var(--gray-500);
+  font-size: clamp(9px, 2.5vw, 10px);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
